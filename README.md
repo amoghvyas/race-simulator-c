@@ -1,4 +1,4 @@
-# race-simulator-c
+# Real Time Digital Car Race Simulator
 A digital race simulation using C structures and random number generation.
 
 Built a console-based race simulator in C to practice basic system concepts.

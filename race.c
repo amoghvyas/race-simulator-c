@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <windows.h> //experimental
 
 // Structures section
 typedef struct Race {
@@ -20,9 +21,23 @@ typedef struct RaceCar {
 void printIntro(){
   printf("Welcome to our main event digital race fans!\nI hope everybody has their snacks because we are about to begin!\n");
 }
+//experimental (using windows header file for first time)
 void printCountDown(){
-  printf("\nRacers Ready! In...\n5\n4\n3\n2\n1\nRace!\n");
+  printf("\nRacers Ready! In...\n");
+  Sleep(1000); // Pauses for 1000 milliseconds (1 second)
+  printf("5\n");
+  Sleep(1000);
+  printf("4\n");
+  Sleep(1000);
+  printf("3\n");
+  Sleep(1000);
+  printf("2\n");
+  Sleep(1000);
+  printf("1\n");
+  Sleep(1000);
+  printf("Race!\n");
 }
+//conventional code
 void printFirstPlaceAfterLap(struct Race* race){
   printf("\nAfter lap number %d\nFirst Place Is: %s in the %s race car!\n", race->currentLap, race->firstPlaceDriverName, race->firstPlaceRaceCarColor);
 }

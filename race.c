@@ -20,22 +20,29 @@ typedef struct RaceCar {
 // Print functions section
 void printIntro(){
   printf("Welcome to our main event digital race fans!\nI hope everybody has their snacks because we are about to begin!\n");
+	Sleep(2000);
 }
 //experimental (using windows header file for first time)
 void printCountDown(){
   printf("\nRacers Ready! In...\n");
-  Sleep(1000); // Pauses for 1000 milliseconds (1 second)
-  printf("5\n");
-  Sleep(1000);
-  printf("4\n");
-  Sleep(1000);
-  printf("3\n");
-  Sleep(1000);
-  printf("2\n");
-  Sleep(1000);
-  printf("1\n");
-  Sleep(1000);
-  printf("Race!\n");
+	Sleep(1000); // Pauses for 1000 milliseconds (1 second)
+  	system("cls"); //clear console
+	printf("5\n");
+  	Sleep(1000);
+	system("cls");
+  	printf("4\n");
+  	Sleep(1000);
+	system("cls");
+  	printf("3\n");
+  	Sleep(1000);
+	system("cls");
+  	printf("2\n");
+  	Sleep(1000);
+	system("cls");
+  	printf("1\n");
+  	Sleep(1000);
+	system("cls");
+  	printf("Race!\n");
 }
 //conventional code
 void printFirstPlaceAfterLap(struct Race* race){
@@ -81,9 +88,10 @@ void startRace(struct RaceCar* raceCar1, struct RaceCar* raceCar2){
 // Main function
 int main() {
 	srand(time(0));
-  printIntro();
-  printCountDown();
-  struct RaceCar racer1 = {"Racer 1", "Blue", 0};
-  struct RaceCar racer2 = {"Racer 2", "Red", 0};
-  startRace(&racer1, &racer2);
-};
+  	printIntro();
+  	printCountDown();
+  	struct RaceCar racer1 = {"Racer 1", "Blue", 0};
+  	struct RaceCar racer2 = {"Racer 2", "Red", 0};
+  	startRace(&racer1, &racer2);
+	return 0;
+}
